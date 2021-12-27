@@ -6,7 +6,7 @@
 /*   By: wrolanda <wrolanda@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 12:46:28 by wrolanda          #+#    #+#             */
-/*   Updated: 2021/12/28 01:36:29 by wrolanda         ###   ########.fr       */
+/*   Updated: 2021/12/28 02:41:20 by wrolanda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,10 @@ int	ft_putstr(char *s)
 
 	i = 0;
 	if (s == NULL)
-		return (0);
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
 	while (s[i])
 		i += ft_putchar(s[i]);
 	return (i);
