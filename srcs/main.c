@@ -6,7 +6,7 @@
 /*   By: wrolanda <wrolanda@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/28 02:01:00 by wrolanda          #+#    #+#             */
-/*   Updated: 2021/12/28 02:06:57 by wrolanda         ###   ########.fr       */
+/*   Updated: 2021/12/28 02:39:25 by wrolanda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 int	main(void)
 {
-	printf(" NULL %s NULL \n", NULL);
-	ft_printf(" NULL %s NULL \n", NULL);
+	char	*p = NULL;
+
+	ft_printf("%s\n", p);
+	printf("%s", p);
+	return (0);
 }
