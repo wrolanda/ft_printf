@@ -6,13 +6,13 @@
 /*   By: wrolanda <wrolanda@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 13:17:28 by wrolanda          #+#    #+#             */
-/*   Updated: 2021/12/28 01:45:17 by wrolanda         ###   ########.fr       */
+/*   Updated: 2021/12/28 13:18:55 by wrolanda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-int	ft_countnbr(int n)
+int	ft_countnbr(long int n)
 {
 	int	i;
 
@@ -20,11 +20,6 @@ int	ft_countnbr(int n)
 	if (n < 0)
 	{
 		i++;
-		if (n == -2147483648)
-		{
-			i++;
-			n = -147483648;
-		}
 		n = -n;
 	}
 	while (n > 9)
@@ -37,9 +32,9 @@ int	ft_countnbr(int n)
 
 int	ft_putnbr(int n)
 {
-	int	k;
+	long int	k;
 
-	k = ft_countnbr(n);
+	k = ft_countnbr((long int)n);
 	if (n < 0)
 	{
 		ft_putchar('-');
