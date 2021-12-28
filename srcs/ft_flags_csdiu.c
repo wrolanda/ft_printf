@@ -6,7 +6,7 @@
 /*   By: wrolanda <wrolanda@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/27 21:07:46 by wrolanda          #+#    #+#             */
-/*   Updated: 2021/12/28 02:38:27 by wrolanda         ###   ########.fr       */
+/*   Updated: 2021/12/28 18:19:56 by wrolanda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,5 @@ int	ft_flag_di(t_print *tab, int i)
 
 	numb = va_arg(tab->argptr, int);
 	i = ft_putnbr(numb);
-	if (numb < 0)
-		i++;
 	return (i);
 }
