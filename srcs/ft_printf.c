@@ -6,7 +6,7 @@
 /*   By: wrolanda <wrolanda@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 23:09:24 by wrolanda          #+#    #+#             */
-/*   Updated: 2021/12/29 21:08:05 by wrolanda         ###   ########.fr       */
+/*   Updated: 2021/12/29 22:51:07 by wrolanda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,9 @@ int	ft_bonus_eval(t_print *tab, const char *str, int i)
 
 	k = 0;
 	if (str[i] == '#' && (str[i + 1] == 'x' || str[i + 1] == 'X'))
-	{
-		i++;
-		k = ft_f_sh(tab, "0123456789abcdef", "0123456789ABCDEF", str[i]);
-	}
+		k = ft_f_sh(tab, "0123456789abcdef", "0123456789ABCDEF", str[i + 1]);
+	if (str[i] == '+' && (str[i + 1] == 'd' || str[i + 1] == 'i'))
+		k = ft_flag_plus(tab);
 	return (k);
 }
 
