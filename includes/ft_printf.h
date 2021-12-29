@@ -6,7 +6,7 @@
 /*   By: wrolanda <wrolanda@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 23:10:06 by wrolanda          #+#    #+#             */
-/*   Updated: 2021/12/29 23:24:09 by wrolanda         ###   ########.fr       */
+/*   Updated: 2021/12/29 23:33:53 by wrolanda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,7 @@
 typedef struct s_print
 {
 	va_list	argptr;
-	int		wdt;
-	int		prc;
-	int		zero;
-	int		pnt;
-	int		dash;
 	int		tl;
-	int		sign;
-	int		is_zero;
-	int		perc;
-	int		sp;
 	int		i;
 }	t_print;
 int		ft_printf(const char *str, ...);

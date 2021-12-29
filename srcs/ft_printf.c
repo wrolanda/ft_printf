@@ -6,7 +6,7 @@
 /*   By: wrolanda <wrolanda@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 23:09:24 by wrolanda          #+#    #+#             */
-/*   Updated: 2021/12/29 23:24:11 by wrolanda         ###   ########.fr       */
+/*   Updated: 2021/12/29 23:34:19 by wrolanda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,8 @@
 
 t_print	*ft_initialise_tab(t_print *tab)
 {
-	tab->wdt = 0;
-	tab->prc = 0;
-	tab->zero = 0;
-	tab->pnt = 0;
-	tab->sign = 0;
-	tab->tl = 0;
-	tab->is_zero = 0;
-	tab->dash = 0;
-	tab->perc = 0;
-	tab->sp = 0;
 	tab->i = 0;
+	tab->tl = 0;
 	return (tab);
 }
 
