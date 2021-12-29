@@ -6,7 +6,7 @@
 /*   By: wrolanda <wrolanda@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 13:12:30 by wrolanda          #+#    #+#             */
-/*   Updated: 2021/12/28 13:14:11 by wrolanda         ###   ########.fr       */
+/*   Updated: 2021/12/29 15:43:54 by wrolanda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,5 +53,6 @@ void		ft_putendl(char *s);
 int			ft_putchar(char c);
 int			ft_putstr(char *s);
 int			ft_putnbr(int n);
+int			ft_putnbru(unsigned int n);
 
 #endif

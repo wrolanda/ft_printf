@@ -6,7 +6,7 @@
 /*   By: wrolanda <wrolanda@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 13:17:28 by wrolanda          #+#    #+#             */
-/*   Updated: 2021/12/28 13:20:26 by wrolanda         ###   ########.fr       */
+/*   Updated: 2021/12/29 15:49:49 by wrolanda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,21 @@ int	ft_putnbr(int n)
 		}
 		n = -n;
 	}
+	if (n < 10)
+		ft_putchar(n + '0');
+	else
+	{
+		ft_putnbr(n / 10);
+		ft_putchar((n % 10) + '0');
+	}
+	return (k);
+}
+
+int	ft_putnbru(unsigned int n)
+{
+	int				k;
+
+	k = ft_countnbr((long int) n);
 	if (n < 10)
 		ft_putchar(n + '0');
 	else
