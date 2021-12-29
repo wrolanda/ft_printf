@@ -6,7 +6,7 @@
 /*   By: wrolanda <wrolanda@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 23:09:24 by wrolanda          #+#    #+#             */
-/*   Updated: 2021/12/29 23:15:36 by wrolanda         ###   ########.fr       */
+/*   Updated: 2021/12/29 23:24:11 by wrolanda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,8 @@ int	ft_bonus_eval(t_print *tab, const char *str, int i)
 		k = ft_flag_plus(tab);
 	if (str[i] == ' ' && (str[i + 1] == 'd' || str[i + 1] == 'i'))
 		k = ft_flag_space(tab);
-	/*if (str[i] == ' ' && str[i + 1] == 's')
-		k = ft_flag_spaceS(tab, str[i + 1]);*/
+	if (str[i] == ' ' && str[i + 1] == 's')
+		k = ft_flag_s_space(tab);
 	return (k);
 }
 

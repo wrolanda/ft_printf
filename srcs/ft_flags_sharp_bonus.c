@@ -6,7 +6,7 @@
 /*   By: wrolanda <wrolanda@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/29 19:58:03 by wrolanda          #+#    #+#             */
-/*   Updated: 2021/12/29 23:16:40 by wrolanda         ###   ########.fr       */
+/*   Updated: 2021/12/29 23:24:13 by wrolanda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,4 +64,15 @@ int	ft_flag_space(t_print *tab)
 		i = ft_putchar(' ');
 	i += ft_putnbr(numb);
 	return (i);
+}
+
+int	ft_flag_s_space(t_print *tab)
+{
+	char	*s;
+	int		k;
+
+	s = va_arg(tab->argptr, char *);
+	k = ft_putstr(s);
+	tab->i = 2;
+	return (k);
 }
