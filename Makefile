@@ -6,7 +6,7 @@
 #    By: wrolanda <wrolanda@student.21-school.ru    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/21 23:04:08 by wrolanda          #+#    #+#              #
-#    Updated: 2021/12/29 18:26:00 by wrolanda         ###   ########.fr        #
+#    Updated: 2021/12/29 20:18:13 by wrolanda         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRCS	=	srcs/ft_printf.c\
 			libft/ft_putchar.c	libft/ft_putnbr.c	libft/ft_putstr.c\
 			libft/ft_strlen.c
 
-SRCS_B	=	
+SRCS_B	=	srcs/ft_flags_sharp_bonus.c
 
 HEADER	=	includes/ft_printf.h
 
@@ -47,7 +47,7 @@ $(NAME)	:	$(OBJ) $(HEADER)
 # $@ - The file name of the target of the rule. If the target is an archive member, then '$ @' denotes the name of the archive file.
 
 bonus	:
-	@make OBJ = "$(OBJ_B)" all
+	@make OBJ="$(OBJ_B)" all
 
 clean	:
 	rm	-f $(OBJ) $(OBJ_B)

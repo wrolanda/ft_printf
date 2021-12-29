@@ -6,7 +6,7 @@
 /*   By: wrolanda <wrolanda@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 23:09:24 by wrolanda          #+#    #+#             */
-/*   Updated: 2021/12/29 18:26:19 by wrolanda         ###   ########.fr       */
+/*   Updated: 2021/12/29 21:08:05 by wrolanda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,21 @@ t_print	*ft_initialise_tab(t_print *tab)
 	tab->dash = 0;
 	tab->perc = 0;
 	tab->sp = 0;
+	tab->i = 0;
 	return (tab);
+}
+
+int	ft_bonus_eval(t_print *tab, const char *str, int i)
+{
+	int	k;
+
+	k = 0;
+	if (str[i] == '#' && (str[i + 1] == 'x' || str[i + 1] == 'X'))
+	{
+		i++;
+		k = ft_f_sh(tab, "0123456789abcdef", "0123456789ABCDEF", str[i]);
+	}
+	return (k);
 }
 
 int	ft_eval_str(t_print *tab, const char *str, int i)
@@ -35,7 +49,7 @@ int	ft_eval_str(t_print *tab, const char *str, int i)
 	if (str[i] == '\0')
 		return (0);
 	if (str[i] == 'c')
-		k = ft_flag_c(tab);
+		k = ft_flag_c(tab, str[i]);
 	else if (str[i] == 's')
 		k = ft_flag_s(tab);
 	else if (str[i] == 'd' || str[i] == 'i')
@@ -49,7 +63,9 @@ int	ft_eval_str(t_print *tab, const char *str, int i)
 	else if (str[i] == 'X')
 		k = ft_flag_xX(tab, "0123456789ABCDEF");
 	else if (str[i] == '%')
-		k = ft_putchar('%');
+		k = ft_flag_c(tab, str[i]);
+	else
+		k = ft_bonus_eval(tab, str, i);
 	return (k);
 }
 
@@ -71,7 +87,7 @@ int	ft_printf(const char *str, ...)
 		if (str[i] == '%')
 		{
 			ret += ft_eval_str(tab, str, i + 1);
-			i++;
+			i += tab->i;
 		}
 		else
 			ret += write(1, &str[i], 1);
