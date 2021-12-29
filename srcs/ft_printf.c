@@ -6,7 +6,7 @@
 /*   By: wrolanda <wrolanda@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 23:09:24 by wrolanda          #+#    #+#             */
-/*   Updated: 2021/12/29 16:44:40 by wrolanda         ###   ########.fr       */
+/*   Updated: 2021/12/29 18:26:19 by wrolanda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,12 +44,12 @@ int	ft_eval_str(t_print *tab, const char *str, int i)
 		k = ft_flag_u(tab, i);
 	else if (str[i] == 'p')
 		k = ft_flag_p(tab, "0123456789abcdef");
-	/*else if (str[i] == 'X')
-		k = ft_flag_X(tab, i);
-	else if (str[i] == 'p')
-		k = ft_flag_p(tab, i);
+	else if (str[i] == 'x')
+		k = ft_flag_xX(tab, "0123456789abcdef");
+	else if (str[i] == 'X')
+		k = ft_flag_xX(tab, "0123456789ABCDEF");
 	else if (str[i] == '%')
-		k = ft_flag_proc(tab, i);*/
+		k = ft_putchar('%');
 	return (k);
 }
 

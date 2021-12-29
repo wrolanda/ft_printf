@@ -6,14 +6,14 @@
 #    By: wrolanda <wrolanda@student.21-school.ru    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/21 23:04:08 by wrolanda          #+#    #+#              #
-#    Updated: 2021/12/29 16:47:41 by wrolanda         ###   ########.fr        #
+#    Updated: 2021/12/29 18:26:00 by wrolanda         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	libftprintf.a
 
 SRCS	=	srcs/ft_printf.c\
-			srcs/ft_flags_csdiu.c	srcs/ft_flags_pxX_proc.c\
+			srcs/ft_flags_csdiu.c	srcs/ft_flags_pxX.c\
 			libft/ft_putchar.c	libft/ft_putnbr.c	libft/ft_putstr.c\
 			libft/ft_strlen.c
 
