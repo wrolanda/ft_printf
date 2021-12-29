@@ -6,7 +6,7 @@
 /*   By: wrolanda <wrolanda@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/28 02:01:00 by wrolanda          #+#    #+#             */
-/*   Updated: 2021/12/29 15:48:32 by wrolanda         ###   ########.fr       */
+/*   Updated: 2021/12/29 16:59:02 by wrolanda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,11 @@
 
 int	main(void)
 {
-	char	*p = NULL;
-	unsigned int	i = -1;
+	int		i = 1;
 	int		k, m = 0;
 
-	k = ft_printf("( %u )", (unsigned int)i);
-	m = printf("( %u )", (unsigned int)i);
+	k = ft_printf(" %p %p ", (void *)0, (void *)0);
+	m = printf(" %p %p ", (void *)0, (void *)0);
 
 	printf("\n%d\n", k);
 	printf ("%d\n", m);

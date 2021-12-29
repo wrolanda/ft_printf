@@ -6,7 +6,7 @@
 /*   By: wrolanda <wrolanda@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 23:09:24 by wrolanda          #+#    #+#             */
-/*   Updated: 2021/12/28 18:42:19 by wrolanda         ###   ########.fr       */
+/*   Updated: 2021/12/29 16:44:40 by wrolanda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,9 @@ int	ft_eval_str(t_print *tab, const char *str, int i)
 		k = ft_flag_di(tab, i);
 	else if (str[i] == 'u')
 		k = ft_flag_u(tab, i);
-/*	else if (str[i] == 'x')
-		k = ft_flag_x(tab, i);
-	else if (str[i] == 'X')
+	else if (str[i] == 'p')
+		k = ft_flag_p(tab, "0123456789abcdef");
+	/*else if (str[i] == 'X')
 		k = ft_flag_X(tab, i);
 	else if (str[i] == 'p')
 		k = ft_flag_p(tab, i);

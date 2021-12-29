@@ -6,7 +6,7 @@
 /*   By: wrolanda <wrolanda@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 23:10:06 by wrolanda          #+#    #+#             */
-/*   Updated: 2021/12/29 15:50:22 by wrolanda         ###   ########.fr       */
+/*   Updated: 2021/12/29 16:44:48 by wrolanda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,6 @@ int	ft_flag_c(t_print *tab);
 int	ft_flag_s(t_print *tab);
 int	ft_flag_di(t_print *tab, int i);
 int	ft_flag_u(t_print *tab, int i);
+int	ft_flag_p(t_print *tab, char *mas);
 
 #endif
