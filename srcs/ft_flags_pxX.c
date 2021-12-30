@@ -6,7 +6,7 @@
 /*   By: wrolanda <wrolanda@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/29 15:55:14 by wrolanda          #+#    #+#             */
-/*   Updated: 2021/12/29 21:08:11 by wrolanda         ###   ########.fr       */
+/*   Updated: 2021/12/30 17:37:01 by wrolanda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int	ft_flag_p(t_print *tab, char *mas)
 	return (len);
 }
 
-int	ft_flag_xX(t_print *tab, char *mas)
+int	ft_flag_lux(t_print *tab, char *mas)
 {
 	int				len;
 	unsigned int	x;
