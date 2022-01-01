@@ -6,7 +6,7 @@
 /*   By: wrolanda <wrolanda@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/29 15:55:14 by wrolanda          #+#    #+#             */
-/*   Updated: 2021/12/30 17:37:01 by wrolanda         ###   ########.fr       */
+/*   Updated: 2022/01/01 16:41:12 by wrolanda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,9 @@ int	ft_flag_p(t_print *tab, char *mas)
 	x = va_arg(tab->argptr, unsigned long int);
 	if (x == 0)
 	{
-		write(1, "(nil)", 5);
+		write(1, "0x0", 3);
 		tab->i = 1;
-		return (5);
+		return (3);
 	}
 	len = ft_countnbr_hex(x) + 2;
 	ft_putstr("0x");
