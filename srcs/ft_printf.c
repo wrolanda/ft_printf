@@ -6,7 +6,7 @@
 /*   By: wrolanda <wrolanda@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 23:09:24 by wrolanda          #+#    #+#             */
-/*   Updated: 2022/01/04 20:55:45 by wrolanda         ###   ########.fr       */
+/*   Updated: 2022/01/04 21:53:23 by wrolanda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,12 @@ int	ft_bonus_eval(t_print *tab, const char *str, int i)
 		k = ft_flag_space(tab);
 	if (str[i] == ' ' && str[i + 1] == 's')
 		k = ft_flag_s_space(tab);
+	if (str[i] == '\0')
+	{
+		tab->i = 0;
+		tab->tl = -1;
+		return (0);
+	}
 	return (k);
 }
 
@@ -40,8 +46,6 @@ int	ft_eval_str(t_print *tab, const char *str, int i)
 	int	k;
 
 	k = 0;
-	if (str[i] == '\0')
-		return (0);
 	if (str[i] == 'c')
 		k = ft_flag_c(tab, str[i]);
 	else if (str[i] == 's')
@@ -75,56 +79,18 @@ int	ft_printf(const char *str, ...)
 	ft_initialise_tab(tab);
 	va_start(tab->argptr, str);
 	i = -1;
-	ret = 0;
 	while (str[++i])
 	{
-		if (str[i] == '%' && str[i + 1] != '\0')
+		if (str[i] == '%')
 		{
-			ret += ft_eval_str(tab, str, i + 1);
+			tab->tl += ft_eval_str(tab, str, i + 1);
 			i += tab->i;
 		}
 		else
-			ret += write(1, &str[i], 1);
+			tab->tl += write(1, &str[i], 1);
 	}
 	va_end(tab->argptr);
-	ret += tab->tl;
+	ret = tab->tl;
 	free (tab);
 	return (ret);
 }
-
-/*#include <stdio.h>
-int	main(void)
-{
-	int i;
-
-	i = ft_printf("hello %s", "shura");
-	ft_printf("\nlen = %d\n", i);
-	i = printf("hello %s", "shura");
-	printf("\nlen = %d\n", i);
-	printf("\n");
-
-	i = ft_printf("hello %c", 's');
-	printf("\nlen = %d\n", i);
-	i = printf("hello %c", 's');
-	printf("\nlen = %d\n", i);
-}*/
-
-/*int	ft_printf(const char *str, ...)
-{
-	va_list			argptr;
-	char			*name;
-	unsigned int	days;
-
-	va_start(argptr, str);
-	name = va_arg(argptr, char *);
-	days = va_arg(argptr, unsigned int);
-	ft_putstr(name);
-	ft_putnbr(days);
-	va_end(argptr);
-	return (0);
-}
-
-int	main(void)
-{
-	ft_printf("hello %s, you have %u days left", "shura", 10);
-}*/
