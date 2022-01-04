@@ -6,7 +6,7 @@
 /*   By: wrolanda <wrolanda@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 23:09:24 by wrolanda          #+#    #+#             */
-/*   Updated: 2021/12/30 17:41:20 by wrolanda         ###   ########.fr       */
+/*   Updated: 2022/01/04 20:55:45 by wrolanda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ int	ft_printf(const char *str, ...)
 	ret = 0;
 	while (str[++i])
 	{
-		if (str[i] == '%')
+		if (str[i] == '%' && str[i + 1] != '\0')
 		{
 			ret += ft_eval_str(tab, str, i + 1);
 			i += tab->i;
